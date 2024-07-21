@@ -42,12 +42,14 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+/*
         GlobalScope.launch {
             var result = theCreatorEconomy.getDashBoardData()
             Log.d("TAG", "onCreate1: ${result.body()?.data}")
-        }
+        } Log.i("TAG", "onCreate2: ")
 
-        Log.i("TAG", "onCreate2: ")
+       */
+
         setContent {
             TheCreatorEconomyTheme {
                     App()

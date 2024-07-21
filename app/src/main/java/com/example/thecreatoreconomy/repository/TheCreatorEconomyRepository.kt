@@ -13,13 +13,6 @@ class TheCreatorEconomyRepository @Inject constructor(private val theCreatorEcon
     val data: StateFlow<ApiResponse?>
         get() = _data
 
-    suspend fun getTweets(category:String) {
-   /*     val result = theCreatorEconomyAPI.getTweets("tweets[?(@.category==\"$category\")]")
-        if (result.isSuccessful && result.body() != null) {
-            _tweets.emit(result.body()!!)
-        }*/
-    }
-
     suspend fun getDashBoardData() {
         print("getDashBoardData")
         val result = theCreatorEconomyAPI.getDashBoardData()
@@ -28,13 +21,5 @@ class TheCreatorEconomyRepository @Inject constructor(private val theCreatorEcon
             _data.emit(result.body()!!)
         }
     }
-
-    suspend fun getCategories() {
-    /*    val result = theCreatorEconomyAPI.getCategories()
-        if (result.isSuccessful && result.body() != null) {
-            _categories.emit(result.body()!!)
-        }*/
-    }
-
 
 }
